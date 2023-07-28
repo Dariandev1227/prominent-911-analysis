@@ -4,6 +4,7 @@ import { Box, Typography } from "@mui/material";
 import { Uploader } from "../../Components/Uploader";
 import { useFile } from "../../context/fileContext";
 import MapCard from "../../Components/MapCard";
+import DescriptionWrappr from "../../Components/DescriptionWrapper";
 
 const Home = () => {
   const { file, setFile } = useFile();
@@ -22,6 +23,7 @@ const Home = () => {
       sx={{
         width: "100%",
         height: "100vh",
+        boxSizing: "border-box",
       }}
     >
       {Object.keys(file).length === 0 ? (
@@ -42,8 +44,11 @@ const Home = () => {
           <Uploader handleChange={handleChange} />
         </Box>
       ) : (
-        <Box height="100%" width="450px" padding={10}>
+        <Box height="100%" width="100%" padding={10} sx={{ display: "flex" }}>
           <MapCard />
+          <Box ml={4}>
+            <DescriptionWrappr data={file} />
+          </Box>
         </Box>
       )}
     </Box>

@@ -110,3 +110,25 @@ export interface Apparatus {
   };
   unit_type: string;
 }
+
+export interface WeatherAPIOptionType {
+  lat: string;
+  lon: string;
+  start: string;
+  end: string;
+}
+
+export interface WeatherData {
+  coco: number | null;
+  dwpt: number | null;
+  prcp: number | null;
+  pres: number | null;
+  rhum: number | null;
+  snow: number | null;
+  temp: number | null;
+  time: string;
+  tsun: number | null;
+  wdir: number | null;
+  wpgt: number | null;
+  wspd: number | null;
+}

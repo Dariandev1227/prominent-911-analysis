@@ -3,11 +3,7 @@ import { useEffect } from "react";
 import { Box } from "@mui/material";
 import { useMapbox } from "../hooks/useMapBox";
 import { useFile } from "../context/fileContext";
-
-const formatTime = (time: string) => {
-  return `${new Date(time).toLocaleTimeString()} 
-  ${new Date(time).toLocaleDateString()}`;
-};
+import { formatTime } from "../utils";
 
 const MapCard = () => {
   const {
@@ -39,16 +35,16 @@ const MapCard = () => {
     </div>
     `;
 
-  const mapbox = useMapbox(
+  const { initilizeMap, mapContainerRef } = useMapbox(
     [address.longitude, address.latitude],
     apparatus,
     popupHTMLElement
   );
   // console.log("aaaaaaaa", file);
-  useEffect(() => mapbox.initilizeMap, []);
+  useEffect(() => initilizeMap(), [address.longitude, address.latitude]);
   return (
     <Box
-      ref={mapbox.mapContainerRef}
+      ref={mapContainerRef}
       sx={{
         alignItems: "center",
         justifyContent: "center",

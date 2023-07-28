@@ -2,8 +2,9 @@ import mapboxgl, { LngLatLike } from "mapbox-gl";
 import { useEffect, useRef, useState } from "react";
 
 import { Apparatus } from "../types";
+import { formatTime } from "../utils";
 
-const INITAL_ZOOM = 12;
+const INITAL_ZOOM = 11;
 
 export function useMapbox(
   initalLocation: LngLatLike,
@@ -38,6 +39,12 @@ export function useMapbox(
       <div class='pop-detail-wrapper'>
         <label class='pop-label'>Car ID: </label>
         <p class='pop-detail'>${unit.car_id}</p>
+      </div>
+      <div class='pop-detail-wrapper'>
+        <label class='pop-label'>Dispatched Time: </label>
+        <p class='pop-detail'>${formatTime(
+          unit.unit_status.dispatched.timestamp
+        )}</p>
       </div>
       `;
       const coords: LngLatLike = [

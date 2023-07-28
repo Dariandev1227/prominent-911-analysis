@@ -1,3 +1,7 @@
+html * {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -18,10 +22,11 @@ code {
 
 .marker {
   background-size: cover;
-  width: 10px;
-  height: 10px;
+  width: 40px;
+  height: 40px;
   background-color: red;
   border-radius: 50%;
+  background-image: url('./assets/fireCar.png');
 }
 
 .pop-detail-wrapper {
