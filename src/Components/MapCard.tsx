@@ -40,7 +40,8 @@ const MapCard = () => {
     apparatus,
     popupHTMLElement
   );
-  // console.log("aaaaaaaa", file);
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => initilizeMap(), [address.longitude, address.latitude]);
   return (
     <Box

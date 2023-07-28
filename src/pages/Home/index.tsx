@@ -37,15 +37,19 @@ const Home = () => {
             flexDirection: "column",
           }}
         >
-          <Typography fontSize={"24px"}>
+          <Typography fontSize={"24px"} data-testid="no-data-text">
             There is no data available right now. <br /> Please upload one CAD
             file a time.
           </Typography>
-          <Uploader handleChange={handleChange} />
+          <Box mt={4}>
+            <Uploader handleChange={handleChange} />
+          </Box>
         </Box>
       ) : (
         <Box height="100%" width="100%" padding={10} sx={{ display: "flex" }}>
-          <MapCard />
+          <Box>
+            <MapCard />
+          </Box>
           <Box ml={4}>
             <DescriptionWrappr data={file} />
           </Box>

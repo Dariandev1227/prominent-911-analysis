@@ -8,7 +8,7 @@ interface UploaderProps {
 
 export const Uploader: React.FC<UploaderProps> = ({ handleChange }) => {
   return (
-    <Box sx={{ display: "flex", justifyContent: "center", mt: 4 }}>
+    <Box sx={{ display: "flex", justifyContent: "center" }}>
       <input
         className="uploader-input"
         id="contained-button-file"

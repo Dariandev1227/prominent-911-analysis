@@ -28,7 +28,7 @@ export function useMapbox(
     });
 
     const locationMarkerInstance = new mapboxgl.Marker()
-      .setPopup(new mapboxgl.Popup().setHTML(popupHTMLElement))
+      .setPopup(new mapboxgl.Popup())
       .setLngLat(mapCoords)
       .addTo(map);
 
@@ -68,6 +68,7 @@ export function useMapbox(
           .addTo(mapInstance)
       );
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [marker, mapInstance]);
 
   return { setMapCoords, mapContainerRef, initilizeMap, mapCoords };

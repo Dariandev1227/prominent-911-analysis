@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect } from "react";
 
 import { WeatherAPIOptionType, WeatherData } from "../types";
 import { getClimateDate } from "../services/getClimateData";
@@ -28,7 +28,7 @@ export const useWeatherData = ({ lat, lon, start, end, hour }: ParamTypes) => {
         console.log(err);
       }
     })();
-  }, []);
+  }, [end, hour, lat, lon, start]);
 
   return { isLoading, climateData };
 };

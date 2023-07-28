@@ -1,6 +1,5 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import { Label } from "@mui/icons-material";
 
 interface DescriptionDetailProps {
   label: string;
