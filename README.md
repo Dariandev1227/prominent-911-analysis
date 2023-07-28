@@ -1,10 +1,25 @@
-# Getting Started with Create React App
+# Prominent Edge Test Assessment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I spent 4 hours working on this project.
+
+### Things I would have done if it was production
+
+1. I will write some test cases and improve UI with responsiveness.
+
+###
 
 ## Available Scripts
 
-In the project directory, you can run:
+### `Add ENV`
+
+create `.env.local` file in the src folder and add following keys and url.
+REACT_APP_MAPBOX_TOKEN = ""
+REACT_APP_WEATHER_URL = "https://meteostat.p.rapidapi.com/point/hourly"
+REACT_APP_WEATHER_API_KEY = ""
+
+### `npm install`
+
+Run the command to install dependencies for the app
 
 ### `npm start`
 
@@ -26,21 +41,3 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
